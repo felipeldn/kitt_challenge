@@ -10,10 +10,10 @@ def GetPrice(duration_minutes)
     one_week = 10080
     two_weeks = 20160
     number_of_weeks = duration_minutes / one_week
-    result = duration_minutes * price_per_minute
+    price_under_twelve_minutes = duration_minutes * price_per_minute
 
     if duration_minutes.between?(1, 11)
-        puts result
+        puts price_under_twelve_minutes
     elsif duration_minutes.between?(12, 60)
         puts price_per_hour
     elsif duration_minutes.between?(61, 179)
@@ -30,4 +30,4 @@ def GetPrice(duration_minutes)
 
 end 
 
-GetPrice(40320)
+GetPrice(179)
